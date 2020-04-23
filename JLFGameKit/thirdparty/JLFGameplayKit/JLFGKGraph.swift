@@ -62,7 +62,7 @@ class JLFGKGraph: NSObject {
         //realNodes.removeObjects(in: nodes)
         for node in nodes {
             if (realNodes.contains(node)) {
-                let index = realNodes.index(of: node)
+                let index = realNodes.firstIndex(of: node)
                 realNodes.remove(at: index!)
             }
         }

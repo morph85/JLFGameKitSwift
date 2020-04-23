@@ -67,7 +67,7 @@ class GeometryTests: XCTestCase {
                 [-1, -1],
             ];
         let sampleDirection: vector_float2 = [1, 1]
-        let unitDirection: vector_float2 = vector_normalize(sampleDirection)
+        let unitDirection: vector_float2 = simd_normalize(sampleDirection)
         let expected: vector_float2 = [sampleDirection.x + unitDirection.x, sampleDirection.y + unitDirection.y]
         let p1 = JLFGKPolygonObstacle(points: pointsAroundOrigin, count: 4)
         let nodes: [JLFGKGraphNode2D] = p1.nodes(withBufferRadius: 1.0)
@@ -89,8 +89,8 @@ class GeometryTests: XCTestCase {
     
     func testSimdVectorFunctions() {
         let v: vector_float2 = [0, 5.0]
-        XCTAssertEqual(vector_length(v), 5.0)
-        let normal: vector_float2 = vector_normalize(v)
+        XCTAssertEqual(simd_length(v), 5.0)
+        let normal: vector_float2 = simd_normalize(v)
         XCTAssertEqual(normal.x, 0.0)
         XCTAssertEqual(normal.y, 1.0)
     }

@@ -42,7 +42,7 @@ class JLFGKGraphNode: NSObject {
         //assert(nodes != nil, "JLFGKGraphNode -removeConnectionsToNodes:bidirectional: Cannot call with a nil nodes array.")
         for node: JLFGKGraphNode in nodes {
             if self.nodes.contains(node) {
-                self.nodes.remove(at: self.nodes.index(of: node)!)
+                self.nodes.remove(at: self.nodes.firstIndex(of: node)!)
                 if bidirectional {
                     node.removeConnections(toNodes: [self], bidirectional: false)
                 }

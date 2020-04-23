@@ -37,7 +37,7 @@ class CharacterAnimationComponent: JLFGKComponent {
     var isWaving: Bool = false
     
     init(baseTextureName: String, characterAtlas atlas: SKTextureAtlas) {
-        assert((baseTextureName.characters.count ) > 0, "Bad texture name")
+        assert((baseTextureName.count ) > 0, "Bad texture name")
         super.init()
         self.baseTextureName = baseTextureName
         self.atlas = atlas

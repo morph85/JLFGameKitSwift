@@ -39,13 +39,13 @@ class JLFGKComponentSystem: NSObject {
     }
     
     func remove(_ component: JLFGKComponent) {
-        componentArray.remove(at: componentArray.index(of: component)!)
+        componentArray.remove(at: componentArray.firstIndex(of: component)!)
     }
     
     func removeComponent(with entity: JLFGKEntity) {
         let component: JLFGKComponent? = entity.component(for: componentClass)
         if component != nil {
-            componentArray.remove(at: componentArray.index(of: component!)!)
+            componentArray.remove(at: componentArray.firstIndex(of: component!)!)
         }
     }
     
