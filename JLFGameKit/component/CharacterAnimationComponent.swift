@@ -87,7 +87,7 @@ class CharacterAnimationComponent: JLFGKComponent {
                         animationTime += seconds
                     }
                     let direction: CGPoint = (m?.moveDirection)!
-                    if fabs(Float(direction.x)) > fabs(Float(direction.y)) {
+                    if abs(Float(direction.x)) > abs(Float(direction.y)) {
                         facing = (direction.x > 0) ? .facingRight : .facingLeft
                     } else {
                         facing = (direction.y > 0) ? .facingUp : .facingDown

@@ -40,7 +40,7 @@ class BouncyAnimationComponent: JLFGKComponent {
         }
         if isBouncing {
             bounceTime += seconds
-            let offset: CGFloat = fabs(sin(CGFloat(bounceTime) / (bounceSpeed / 2.0))) / 3.0
+            let offset: CGFloat = abs(sin(CGFloat(bounceTime) / (bounceSpeed / 2.0))) / 3.0
             sprite?.sprite?.anchorPoint = CGPoint(x: CGFloat(0.5), y: CGFloat(0.5 - offset))
         }
         
