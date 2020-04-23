@@ -52,7 +52,7 @@ extension JLFGKPolygonObstacle {
         for i in 0..<numVertices {
             let point: vector_float2 = vertex(at: i)
             var dv: vector_float2 = [point.x - centroid.x, point.y - centroid.y]
-            dv = vector_normalize(dv)
+            dv = simd_normalize(dv)
             dv = [dv.x * radius, dv.y * radius]
             let result: vector_float2 = [point.x + dv.x, point.y + dv.y]
             nodes.append(JLFGKGraphNode2D.node(withPoint: result))

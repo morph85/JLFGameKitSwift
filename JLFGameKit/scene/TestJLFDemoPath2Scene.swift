@@ -173,7 +173,7 @@ class TestJLFDemoPath2Scene: SKScene {
         playerSprite?.sprite?.position = CGPoint(x: CGFloat(CGFloat(x) * kTileSize), y: CGFloat(CGFloat(y) * kTileSize))
     }
     
-    func handlePan(_ sender: UIPanGestureRecognizer) {
+    @objc func handlePan(_ sender: UIPanGestureRecognizer) {
         if sender.state == .began {
             sceneOffsetAtPanStart = (sceneRoot?.position)!
         }
@@ -201,7 +201,7 @@ class TestJLFDemoPath2Scene: SKScene {
         
     }
     
-    func handleTap(_ sender: UITapGestureRecognizer) {
+    @objc func handleTap(_ sender: UITapGestureRecognizer) {
         if sender.state != .ended {
             return
         }

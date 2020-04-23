@@ -37,7 +37,7 @@ class JLFGKGraphNode2D: JLFGKGraphNode {
     override func cost(to node: JLFGKGraphNode) -> Float {
         assert((node is JLFGKGraphNode2D), "JLFGKGraphNode2D -costToNode: Only works with JLFGKGraphNode2D.")
         let other: JLFGKGraphNode2D? = (node as? JLFGKGraphNode2D)
-        return vector_distance((other?.position)!, position)
+        return simd_distance((other?.position)!, position)
     }
     
     override var description:String {

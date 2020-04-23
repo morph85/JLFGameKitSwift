@@ -56,7 +56,7 @@ class JLFGKSimplePriorityQueue: NSObject {
         // Now find the right spot to insert the object and do it.
         var currentIndex: Int = 0
         while currentIndex < numEntries {
-            let currentPriority: Float = (entries[currentIndex] as AnyObject).priority
+            let currentPriority: Float = (entries[currentIndex] as? AnyObject)?.priority ?? 0
             if priority < currentPriority {
                 entries.insert(PriorityQueueEntry(obj: obj, priority: priority) , at: currentIndex)
                 break

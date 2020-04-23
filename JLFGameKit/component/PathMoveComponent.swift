@@ -14,7 +14,7 @@ let kPathMoveComponentDefaultMoveSpeed: Float = 140.0
 private let kMoveStopThreshold: CGFloat = 8.0
 
 class PathMoveComponent: JLFGKComponent {
-    var waypointCallback: WaypointReached
+    var waypointCallback: WaypointReached!
     var distanceBetweenWaypoints: Float = 0.0
     var moveSpeed: Float = 0.0
     var isMoving: Bool = false

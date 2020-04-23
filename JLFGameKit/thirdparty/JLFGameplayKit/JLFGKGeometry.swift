@@ -18,14 +18,14 @@ func line_segments_intersect(_ p1: vector_float2, _ p2: vector_float2, _ q1: vec
     let r: vector_float2 = [p2.x - p1.x, p2.y - p1.y]
     let s: vector_float2 = [q2.x - q1.x, q2.y - q1.y]
     let q_minus_p: vector_float2 = [q1.x - p1.x, q1.y - p1.y]
-    let r_cross_s: Float = vector_cross(r, s).z
-    let q_minus_p_cross_r: Float = vector_cross(q_minus_p, r).z
-    let q_minus_p_cross_s: Float = vector_cross(q_minus_p, s).z
+    let r_cross_s: Float = simd_cross(r, s).z
+    let q_minus_p_cross_r: Float = simd_cross(q_minus_p, r).z
+    let q_minus_p_cross_s: Float = simd_cross(q_minus_p, s).z
     if q_minus_p_cross_r == 0 && r_cross_s == 0 {
         // The lines are colinear
-        let magnitude_r: Float = vector_length(r)
-        let s_dot_r: Float = vector_dot(s, r)
-        let t0: Float = vector_dot(q_minus_p, r) / magnitude_r
+        let magnitude_r: Float = simd_length(r)
+        let s_dot_r: Float = simd_dot(s, r)
+        let t0: Float = simd_dot(q_minus_p, r) / magnitude_r
         let t1: Float = t0 + s_dot_r / magnitude_r
         return (t0 >= 0 && t0 <= 1) || (t1 >= 0 && t1 <= 1)
     }

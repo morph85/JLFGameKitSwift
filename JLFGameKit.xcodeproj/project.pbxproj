@@ -13,6 +13,7 @@
 		0FA290991ED2EC3F00DD8DE8 /* GeometryTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA290981ED2EC3F00DD8DE8 /* GeometryTests.swift */; };
 		0FA478FE1ED6D2A00053815D /* PriorityQueueTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA478FD1ED6D2A00053815D /* PriorityQueueTests.swift */; };
 		0FA479001ED6D2AF0053815D /* StateMachineTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FA478FF1ED6D2AF0053815D /* StateMachineTests.swift */; };
+		0FCB0C1E2451A80200E73832 /* README.md in Resources */ = {isa = PBXBuildFile; fileRef = 0FCB0C1D2451A80200E73832 /* README.md */; };
 		0FCC6F881E0D1B7C00540B7A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FCC6F871E0D1B7C00540B7A /* AppDelegate.swift */; };
 		0FCC6F901E0D1B7C00540B7A /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0FCC6F8F1E0D1B7C00540B7A /* GameViewController.swift */; };
 		0FCC6F931E0D1B7C00540B7A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0FCC6F911E0D1B7C00540B7A /* Main.storyboard */; };
@@ -109,6 +110,7 @@
 		0FA478FB1ED6C8F10053815D /* JLFGKStateMachine.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = JLFGKStateMachine.swift; sourceTree = "<group>"; };
 		0FA478FD1ED6D2A00053815D /* PriorityQueueTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PriorityQueueTests.swift; sourceTree = "<group>"; };
 		0FA478FF1ED6D2AF0053815D /* StateMachineTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StateMachineTests.swift; sourceTree = "<group>"; };
+		0FCB0C1D2451A80200E73832 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		0FCC6F841E0D1B7C00540B7A /* JLFGameKit.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = JLFGameKit.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0FCC6F871E0D1B7C00540B7A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0FCC6F8F1E0D1B7C00540B7A /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
@@ -191,6 +193,7 @@
 		0FCC6F7B1E0D1B7C00540B7A = {
 			isa = PBXGroup;
 			children = (
+				0FCB0C1D2451A80200E73832 /* README.md */,
 				0FCC6F861E0D1B7C00540B7A /* JLFGameKit */,
 				0FCC6FA11E0D1B7C00540B7A /* JLFGameKitTests */,
 				0FCC6FAC1E0D1B7C00540B7A /* JLFGameKitUITests */,
@@ -450,6 +453,7 @@
 			developmentRegion = English;
 			hasScannedForEncodings = 0;
 			knownRegions = (
+				English,
 				en,
 				Base,
 			);
@@ -482,6 +486,7 @@
 				1AA964001EF8BFDC00F3E19D /* TestJLFDemo1Scene.sks in Resources */,
 				0FCC6F981E0D1B7C00540B7A /* LaunchScreen.storyboard in Resources */,
 				1AA963ED1EF7D1D100F3E19D /* a_sword.png in Resources */,
+				0FCB0C1E2451A80200E73832 /* README.md in Resources */,
 				1AA963E91EF7D1D100F3E19D /* a_castle.png in Resources */,
 				1AA963F01EF7D1D100F3E19D /* Characters.atlas in Resources */,
 			);
@@ -710,7 +715,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.test.JLFGameKit;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Debug;
 		};
@@ -723,7 +728,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.test.JLFGameKit;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				SWIFT_VERSION = 3.0;
+				SWIFT_VERSION = 4.0;
 			};
 			name = Release;
 		};
